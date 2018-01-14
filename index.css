@@ -3,6 +3,7 @@
     padding:29px;
     align-content: middle;
     vertical-align: middle;
+    background-color:ghostwhite;
 }
 
 .theDropdown {
@@ -28,4 +29,17 @@
 .col-centered{
     float: none;
     margin: 0 auto;
+}
+
+.horizontal{
+background-color:rgb(105, 87, 63);
+}
+
+.history{
+background-color:rgb(105, 87, 63);    
+font-size: 20px;
+font-weight: 600;
+color: black;
+padding-top: -70px;
+
 }

@@ -31,15 +31,21 @@
     margin: 0 auto;
 }
 
-.horizontal{
-background-color:rgb(105, 87, 63);
-}
+
 
 .history{
-background-color:rgb(105, 87, 63);    
+background-color:grey;    
 font-size: 20px;
 font-weight: 600;
 color: black;
-padding-top: -70px;
+;
+}
+.test{
+    height:75%;
+width: 100%;
+overflow:auto;
+}
 
+.test1{
+    background-color:rgba(211, 205, 205, 0.986);    
 }

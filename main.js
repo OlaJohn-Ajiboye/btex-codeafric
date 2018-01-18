@@ -1,6 +1,7 @@
 //gets currency from user selection
-var coinApp = angular.module('coinApp', ['tw-currency-select']);
+var coinApp = angular.module('coinApp', ['tw-currency-select','ngMaterialDatePicker']);
 coinApp.controller('mainController', function($scope, $http) {
+  
 
     $scope.title = "My Bitcoin Exchange";
     $scope.currencyChangeCount = 0;
@@ -90,3 +91,33 @@ coinApp.controller('mainController', function($scope, $http) {
     };
   });
  
+  (function () {
+    'use strict';
+    angular.module('mdDatetimePickerDemo', [
+        'ngMaterialDatePicker'
+      ])
+      .controller('DemoCtrl', function ($scope) {
+  
+        var startOfWeek = moment().startOf('week');
+        var endOfWeek = moment().endOf('week');
+  
+        var days = [];
+        var day = startOfWeek;
+  
+        while (day <= endOfWeek) {
+            days.push(day.format("YYYY-MM-DDTHH:mm:ssZ"));
+            day = day.clone().add(1, 'd');
+        }
+  
+        $scope.date = new Date();
+        $scope.time = new Date();
+        $scope.dateTime = new Date();
+        $scope.minDate = moment().subtract(1, 'month');
+        $scope.maxDate = moment().add(1, 'month');
+        $scope.dates = days
+  
+      })
+  
+      
+      
+  })();

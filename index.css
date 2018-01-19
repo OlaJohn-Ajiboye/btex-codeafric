@@ -1,9 +1,12 @@
-
+html{
+    font-family: 'Risque', cursive;
+}
  body {
     padding:29px;
     align-content: middle;
     vertical-align: middle;
-    background-color:ghostwhite;
+    background-color:rgb(208, 208, 235);
+    font-family: 'Risque', cursive;
 }
 
 .theDropdown {
@@ -11,13 +14,14 @@
 }
 .currency{
     padding-bottom:15px;
+    font-family: 'Risque', cursive;
 }
 #units{
     font-size: 20px;
     font-weight: 600;
     color: black;
     padding-right: 105px;
-   
+    font-family: 'Risque', cursive;
 }
 .pay{
     font-size: 20px;
@@ -25,6 +29,7 @@
     color: black;
     padding-right:105px; 
     padding-bottom:15px; 
+    font-family: 'Risque', cursive;
 }
 .col-centered{
     float: none;
@@ -38,14 +43,16 @@ background-color:grey;
 font-size: 20px;
 font-weight: 600;
 color: black;
-;
+font-family: 'Risque', cursive;
 }
 .test{
     height:75%;
 width: 100%;
 overflow:auto;
+font-family: 'Risque', cursive;
 }
 
 .test1{
+    font-family: 'Risque', cursive;
     background-color:rgba(211, 205, 205, 0.986);    
 }

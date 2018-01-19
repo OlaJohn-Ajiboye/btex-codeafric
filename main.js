@@ -1,8 +1,13 @@
 //gets currency from user selection
 var coinApp = angular.module('coinApp', ['tw-currency-select','ngMaterialDatePicker']);
 coinApp.controller('mainController', function($scope, $http) {
-  
-
+   
+	$scope.dateTimeStart="2018-01-10";
+	$scope.dateTimeEnd="2018-01-18";
+	
+	var startDate =moment($scope.dateTimeStart).format('YYYY-MM-DD');
+	var endDate= moment($scope.dateTimeEnd).format('YYYY-MM-DD');
+console.log(endDate)
     $scope.title = "My Bitcoin Exchange";
     $scope.currencyChangeCount = 0;
     $scope.currencyCodeChangeCount = 0;
@@ -39,20 +44,20 @@ coinApp.controller('mainController', function($scope, $http) {
           
           $scope.calculateTotal();
           $scope.calculateUnits();
-          console.log(response)
+      
         }, function errorCallback(response) {
           console.error(response);
         });
     }
     $scope.getData = function() {   
-      console.log("working")
+     
       $http({
         method: 'GET',
-        url: "https://api.coindesk.com/v1/bpi/historical/close.json?start=2017-10-01&end=2018-01-10"
+        url: "https://api.coindesk.com/v1/bpi/historical/close.json?start=" + startDate + "&end=" + endDate
       }).then(function successCallback(response) {
         
        $scope.history=response.data.bpi;
-       console.log(response)
+     
         }, function errorCallback(response) {
           console.error(response);
         });
@@ -91,33 +96,4 @@ coinApp.controller('mainController', function($scope, $http) {
     };
   });
  
-  (function () {
-    'use strict';
-    angular.module('mdDatetimePickerDemo', [
-        'ngMaterialDatePicker'
-      ])
-      .controller('DemoCtrl', function ($scope) {
   
-        var startOfWeek = moment().startOf('week');
-        var endOfWeek = moment().endOf('week');
-  
-        var days = [];
-        var day = startOfWeek;
-  
-        while (day <= endOfWeek) {
-            days.push(day.format("YYYY-MM-DDTHH:mm:ssZ"));
-            day = day.clone().add(1, 'd');
-        }
-  
-        $scope.date = new Date();
-        $scope.time = new Date();
-        $scope.dateTime = new Date();
-        $scope.minDate = moment().subtract(1, 'month');
-        $scope.maxDate = moment().add(1, 'month');
-        $scope.dates = days
-  
-      })
-  
-      
-      
-  })();

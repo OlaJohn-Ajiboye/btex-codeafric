@@ -5,6 +5,10 @@
     .topnav a.icon {
       float: right;
       display: block;
+      
+    }
+    table.a{
+        width:90%;
     }
   }
   
@@ -31,7 +35,9 @@
     border:solid yellow;
   
 }
-
+.dated{
+    color:white
+}
 /* Style the links inside the navigation bar */
 .topnav a {
     float: left;

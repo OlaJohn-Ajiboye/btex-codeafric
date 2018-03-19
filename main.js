@@ -127,7 +127,7 @@ coinApp.controller('LoginController', function ($scope, $http) {
 
     $http({
       method: 'POST',
-      url: 'http://localhost:5000/api/login',
+      url: 'http://localhost:3000/api/login',
       data: {
         "email": $scope.email,
         "password": $scope.passwd
@@ -166,7 +166,7 @@ coinApp.controller('RegisterController', function ($scope, $http) {
 
     $http({
       method: 'POST',
-      url: 'http://localhost:5000/api/register',
+      url: 'http://localhost:3000/api/register',
       data: {
         "first_name": $scope.first_name,
         "last_name": $scope.last_name,

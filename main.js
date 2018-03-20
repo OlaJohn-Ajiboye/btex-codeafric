@@ -165,7 +165,7 @@ coinApp.controller('RegisterController', function ($scope, $http) {
         "first_name": $scope.first_name,
         "last_name": $scope.last_name,
         "email": $scope.email,
-        "currency": $scope.currency,
+        "currency": $scope.currency.code,
         "password": $scope.password,
         "confirmpasswd": $scope.confirmpassword
       }

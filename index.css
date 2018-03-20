@@ -5,6 +5,10 @@
     .topnav a.icon {
       float: right;
       display: block;
+      
+    }
+    table.a{
+        width:90%;
     }
   }
   
@@ -24,12 +28,42 @@
     }
   }
 
-  .navbar {
+  
+.topnav {
+    background-color:#263238;
     overflow: hidden;
-    background-color: #333;
-    position: fixed; /* Set the navbar to fixed position */
-    bottom: 0;  /* Position the navbar at the top of the page */
-    width: 100%; /* Full width */
+    border:solid yellow;
+  
+}
+.dated{
+    color:white
+}
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    
+}
+
+/* Change the color of links on hover */
+.topnav a:hover:not(.active) {
+    background-color: #111;
+}
+
+/* Add an active class to highlight the current page */
+.active {
+    background-color: #ffd600;
+    color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+    display: none;
 }
 
  html, body {
@@ -37,37 +71,35 @@
     padding-top:40px;
     align-content: middle;
     vertical-align: middle;
-    background-color: #90a4ae;
+    background-color: #d1c4e9;
     font-family: 'Rammetto One', cursive;
     font-weight: 500;
     
-    background-image: url("https://static.pexels.com/photos/459301/pexels-photo-459301.jpeg") ;
+ background-image: url("bg.jpg") ;
    
     
 }
 
 .title{
     color:#ffd600;
-    font-size: 55px;
+    font-size: 35px;
     font-weight: 900;
-    font-family: 'Lobster',cursive;
+    font-family: Lobster, Monospace;
     text-align: center;
-    
+    font-family: 'Rammetto One', cursive;
 }
 .currency{
     color:#ffd600;
      font-weight: 800;
      font-size: 20px;
      font-family: 'Rammetto One', cursive;
+     padding-top: 10px;
         }
 .theDropdown {
     width: 180px;
     font-family: 'Rammetto One', cursive;
 }
 
-.twitter{
-    box-shadow: 0 1px 6px yellow, 0 1px 4px yellow;   
-}
 .currency{
     padding-bottom:25px;
 }
@@ -76,7 +108,7 @@
      font-weight: 800;
      font-size: 25px;
      font-family: 'Rammetto One', cursive;
-     padding-right: 105px;
+    
     
 }
 .pay{
@@ -84,7 +116,7 @@
      font-weight: 800;
      font-size: 25px;
      font-family: 'Rammetto One', cursive;
-    padding-right:105px; 
+   
     padding-bottom:15px; 
 }
 .col-centered{
@@ -134,6 +166,7 @@
 .test1{
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
     background-color: #263238;
+    border-radius: 7.5px;
    
 }
 
@@ -179,72 +212,40 @@ li a:hover:not(.active) {
 
 **/
 
-.topnav {
-    background-color:#263238;
-    overflow: hidden;
-    border:solid 4px yellow;
-    margin: 0;
-    padding: 0;
-}
-
-/* Style the links inside the navigation bar */
-.topnav a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 25px;
-    
-}
-
-/* Change the color of links on hover */
-.topnav a:hover:not(.active) {
-    background-color: #111;
-}
-
-/* Add an active class to highlight the current page */
-.active {
-    background-color: #ffd600;
-    color: white;
-}
-
-/* Hide the link that should open and close the topnav on small screens */
-.topnav .icon {
-    display: none;
-}
-.topnav a:nth-last-child(2) {
-    float: right;
-    font-size: 25px;
-}
 
 
 
 table.table-bordered{
-    border:2px solid#ffd600;
-    margin-top:20px;
+    border:2px solid white;
+    margin-top:18px;
     font-family: 'Rammetto One', cursive;
     width:100%;
+   
     
   }
 table.table-bordered > thead > tr > th{
     border:.1px solid #ffd600;
-    font-size:15px;
+    font-size:13px;
     font-weight: 900;
     font-family: 'Rammetto One', cursive;
 }
 table.table-bordered > tbody > tr > td{
     border:.1px solid #ffd600;
-    font-size:15px;
+    font-size:13px;
     font-family: 'Rammetto One', cursive;
+    
 }
-
+table.a{
+    table-layout: auto; 
+    width: 180px;
+}
 .disclaimer{
-    color:hsl(256, 100%, 50%);
-    font-weight: 800;
+    color: yellow;
+    font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
+    padding-left:100px;
+    text-align: center;
     
 }
 
@@ -253,4 +254,5 @@ table.table-bordered > tbody > tr > td{
     height: 90%;
     overflow: scroll;  
     border-radius: 10px;
+    padding-top:5px;
 }

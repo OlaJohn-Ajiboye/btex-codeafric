@@ -120,10 +120,7 @@ coinApp.controller('LoginController', function ($scope, $http) {
 
   $scope.handleFormSubmit = function () {
     //console.log("submitted: ", $scope.email, $scope.passwd);
-    if (typeof $scope.email == "undefined" || typeof $scope.password == "undefined") {
-      alert("Ensure you enter correct email and password");
-      return;
-    }
+  
 
     $http({
       method: 'POST',
@@ -155,7 +152,7 @@ coinApp.controller('RegisterController', function ($scope, $http) {
     if (!!registerToken) {
       window.location.href = "login.html";
     }
-  }
+  };
 
   $scope.handleFormRegister = function () {
 

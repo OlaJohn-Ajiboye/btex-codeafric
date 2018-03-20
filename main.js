@@ -41,7 +41,7 @@ coinApp.controller('mainController', function ($scope, $http) {
 
 $scope.logout = function () {
     window.sessionStorage.removeItem("login_token");
-    alert(" You have Logged Out Succesfully")
+    alert(" You have Logged Out Succesfully");
     window.location.href = "login.html";
   }
   $scope.getPrice = function () {

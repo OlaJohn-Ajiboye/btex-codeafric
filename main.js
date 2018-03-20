@@ -39,13 +39,13 @@ coinApp.controller('mainController', function ($scope, $http) {
     }
   }
 
-  $scope.logout = function () {
+$scope.logout = function () {
     window.sessionStorage.removeItem("login_token");
     alert(" You have Logged Out Succesfully")
     window.location.href = "login.html";
   }
   $scope.getPrice = function () {
-    checkSession();
+checkSession();
     console.log("Trying to get price");
     $http({
       method: 'GET',
@@ -116,18 +116,18 @@ coinApp.controller('LoginController', function ($scope, $http) {
     if (!!loginToken) {
       window.location.href = "index.html";
     }
-  }
+  };
 
   $scope.handleFormSubmit = function () {
     //console.log("submitted: ", $scope.email, $scope.passwd);
-    if (typeof $scope.email == "undefined" || typeof $scope.passwd == "undefined") {
+    if (typeof $scope.email == "undefined" || typeof $scope.password == "undefined") {
       alert("Ensure you enter correct email and password");
       return;
     }
 
     $http({
       method: 'POST',
-      url: 'http://localhost:5000/api/login',
+      url: 'https://btexapi.herokuapp.com/api/login',
       data: {
         "email": $scope.email,
         "password": $scope.passwd
@@ -159,22 +159,14 @@ coinApp.controller('RegisterController', function ($scope, $http) {
 
   $scope.handleFormRegister = function () {
 
-    if (typeof $scope.email == "undefined" || typeof $scope.passwd == "undefined") {
+    if (typeof $scope.email == "undefined" || typeof $scope.password == "undefined") {
       alert("Ensure you enter correct email and password");
       return;
     }
 
-    console.log("we are here")
-    console.log("submitted: ", 
-      $scope.first_name,
-      $scope.last_name,
-      $scope.email,
-      $scope.currency,
-      $scope.password,
-      $scope.confirmpassword);
     $http({
       method: 'POST',
-      url: 'http://localhost:5000/api/register',
+      url: 'https://btexapi.herokuapp.com/api/register',
       data: {
         "first_name": $scope.first_name,
         "last_name": $scope.last_name,
@@ -189,23 +181,36 @@ coinApp.controller('RegisterController', function ($scope, $http) {
         alert("Registration successful");
         window.location.href = "login.html";
       } else {
-        alert("Login failed unknown error");
+        alert("Registration failed " + reponse.data.message);
       }
     }, function errorCallback(response) {
-      alert("Login failed: " + response.data.error);
+      alert("Registration Failed,Try again ");
     });
   };
 
-  $scope.currenciesWithNames = [
+  $scope.currenciesWithNames =  [
     { code: 'EUR', name: 'Euro' },
     { code: 'GBP', name: 'British Pound' },
     { code: 'NGN', name: 'Nigerian Naira' },
     { code: 'CNY', name: 'Chinese Yuan' },
-    { code: 'CAD', name: 'Canadian Dollars' }
+    { code: 'CAD', name: 'Canadian Dollars' },
+    { code: 'JPY', name: 'Japanese yen' },
+    { code: 'CHF', name: 'Swiss franc' },
+    { code: 'RUB', name: 'Russian rouble' },
+    { code: 'ZAR', name: 'South African Rand' },
+    { code: 'SGD', name: 'Singapore dollar' }
+
   ];
 });
 
-
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+      x.className += " responsive";
+  } else {
+      x.className = "topnav";
+  }
+}
 
 
 

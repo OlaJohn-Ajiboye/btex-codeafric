@@ -127,7 +127,7 @@ coinApp.controller('LoginController', function ($scope, $http) {
       url: 'https://btexapi.herokuapp.com/api/login',
       data: {
         "email": $scope.email,
-        "password": $scope.passwd
+        "password": $scope.password
       }
     }).then(function successCallback(response) {
       if (!!response.data.token) {
@@ -156,10 +156,7 @@ coinApp.controller('RegisterController', function ($scope, $http) {
 
   $scope.handleFormRegister = function () {
 
-    if (typeof $scope.email == "undefined" || typeof $scope.password == "undefined") {
-      alert("Ensure you enter correct email and password");
-      return;
-    }
+  
 
     $http({
       method: 'POST',

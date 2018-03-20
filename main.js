@@ -32,7 +32,7 @@ coinApp.controller('mainController', function ($scope, $http) {
 
   ];
 
- /*   checkSession = function () {
+  checkSession = function () {
     var registerToken = window.sessionStorage.getItem("login_token");
     if (!registerToken) {
       window.location.href = "login.html";
@@ -43,9 +43,9 @@ $scope.logout = function () {
     window.sessionStorage.removeItem("login_token");
     alert(" You have Logged Out Succesfully")
     window.location.href = "login.html";
-  }*/
+  }
   $scope.getPrice = function () {
-    //checkSession();
+checkSession();
     console.log("Trying to get price");
     $http({
       method: 'GET',
@@ -127,7 +127,7 @@ coinApp.controller('LoginController', function ($scope, $http) {
 
     $http({
       method: 'POST',
-      url: 'http://localhost:3000/api/login',
+      url: 'https://btexapi.herokuapp.com/api/login',
       data: {
         "email": $scope.email,
         "password": $scope.passwd
@@ -166,7 +166,7 @@ coinApp.controller('RegisterController', function ($scope, $http) {
 
     $http({
       method: 'POST',
-      url: 'http://localhost:3000/api/register',
+      url: 'https://btexapi.herokuapp.com/api/register',
       data: {
         "first_name": $scope.first_name,
         "last_name": $scope.last_name,

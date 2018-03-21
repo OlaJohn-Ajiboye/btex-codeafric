@@ -41,7 +41,7 @@ coinApp.controller('mainController', function ($scope, $http) {
 
 /*$scope.logout = function () {
     window.sessionStorage.removeItem("login_token");
-    alert(" You have Logged Out Succesfully")
+    alert(" You have Logged Out Succesfully");
     window.location.href = "login.html";
   }*/
   $scope.getPrice = function () {
@@ -120,17 +120,14 @@ coinApp.controller('LoginController', function ($scope, $http) {
 
   $scope.handleFormSubmit = function () {
     //console.log("submitted: ", $scope.email, $scope.passwd);
-    if (typeof $scope.email == "undefined" || typeof $scope.password == "undefined") {
-      alert("Ensure you enter correct email and password");
-      return;
-    }
+  
 
     $http({
       method: 'POST',
       url: 'https://btexapi.herokuapp.com/api/login',
       data: {
         "email": $scope.email,
-        "password": $scope.passwd
+        "password": $scope.password
       }
     }).then(function successCallback(response) {
       if (!!response.data.token) {
@@ -155,14 +152,11 @@ coinApp.controller('RegisterController', function ($scope, $http) {
     if (!!registerToken) {
       window.location.href = "login.html";
     }
-  }
+  };
 
   $scope.handleFormRegister = function () {
 
-    if (typeof $scope.email == "undefined" || typeof $scope.password == "undefined") {
-      alert("Ensure you enter correct email and password");
-      return;
-    }
+  
 
     $http({
       method: 'POST',
@@ -171,7 +165,7 @@ coinApp.controller('RegisterController', function ($scope, $http) {
         "first_name": $scope.first_name,
         "last_name": $scope.last_name,
         "email": $scope.email,
-        "currency": $scope.currency,
+        "currency": $scope.currency.code,
         "password": $scope.password,
         "confirmpasswd": $scope.confirmpassword
       }

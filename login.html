@@ -6,30 +6,33 @@
     <link href="login.css" rel="stylesheet">
 </head>
 
-<body ng-controller="LoginController" ng-init="init()">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-3 col-sm-12 text-center " >
+<body class="aligncenter" >
+       
+    <div class="container " ng-controller="LoginController" ng-init="init()">
+        <div class="row  ">
+            <div class="col-md-12  " >
                 <div class="search-box">
                     <div class="caption">
-                        <h1 class="  align-content-sm-center text-center "> BitCoin Calculator</h1>
-                        <p class=" col-md-offset-4 text-center text-info login">Login here  <span class ="glyphicon glyphicon-hand-down"></span></p>
+                        <h1 class="  align-content-sm-center aligncenter "> BitCoin Calculator</h1>
+                        <p class=" aligncenter text-info login">Login here  <span class ="glyphicon glyphicon-hand-down"></span></p>
                     </div>
-                    <form class="loginForm" ng-submit="handleFormSubmit()">
-                        <div class="input-group">
+                    <form class="loginForm aligncenterd" ng-submit="handleFormSubmit()">
+                        <div class="input-group ">
                             <input type="text" id="email" ng-model="email" class="form-control" placeholder="Email">
                             <input type="password" id="passwd" ng-model="password" class="form-control" placeholder="Password">
                             <input type="submit" id="submit" class="form-control" value="Login">
                         </div>
                     </form>
                     <br>
-                   <div style="text-align:center"> <a href="register.html">Register</a>
-                   </div></div>
-                   <h3>Hey,if you are having trouble with login/Register the Database server may be down. Consider using the version of this site without a database.You still get the same services but I'm sorry your session may not be stored</h3>
-                   <a href="https://johnbtcexchange.herokuapp.com/">Launch Site</a>
+                   <div class="aligncenter"> <a href="register.html">Register</a></div>
+                    <br><br>
+                    <div><h5>If you are having trouble with login/Register the server might be down.Visit <a style="color:red; font-weight:bold" href=https://johnbtcexchange.herokuapp.com/index.html#>JohnBtcexchange</a> instead.</h5></div>
+                   
             </div>
         </div>
     </div>
+   
+ 
     <script src="vendor/js/angular.js"></script>
     <script src="vendor/js/angular-animate.min.js"></script>
     <script src="vendor/js/angular-aria.min.js"></script>
@@ -43,4 +46,7 @@
     <script src="vendor/js/tw-currency-select.js"></script>
     <script src="vendor/js/beautifier.js"></script>
     <script src="vendor/js/angular-material-datetimepicker.js"></script>
+    <div class="container">
+         
 </body>
+</html>

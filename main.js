@@ -32,7 +32,7 @@ coinApp.controller('mainController', function ($scope, $http) {
 
   ];
 
-  checkSession = function () {
+ /* checkSession = function () {
     var registerToken = window.sessionStorage.getItem("login_token");
     if (!registerToken) {
       window.location.href = "login.html";
@@ -43,9 +43,9 @@ $scope.logout = function () {
     window.sessionStorage.removeItem("login_token");
     alert(" You have Logged Out Succesfully");
     window.location.href = "login.html";
-  }
+  }*/
   $scope.getPrice = function () {
-//checkSession();
+
     console.log("Trying to get price");
     $http({
       method: 'GET',
@@ -79,10 +79,11 @@ $scope.logout = function () {
     });
   }
   $scope.calculateTotal = function () {
-    console.log($scope.rates);
+    console.log(  $scope.rates);
 
     angular.forEach($scope.rates, function (bt_rate) {
       var total = bt_rate.rate_float * $scope.units;
+      console.log(bt_rate)
 
       if (bt_rate.code == "USD") {
         $scope.total_currency_amount = 0.00;

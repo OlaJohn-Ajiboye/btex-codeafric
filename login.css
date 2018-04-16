@@ -15,6 +15,12 @@
 .aligncenter {
     display: block;
     margin: 0 auto 15px;
+    padding-left: 30%;
+}
+.aligncenterd {
+    display: block;
+    margin: 0 auto 15px;
+    padding-left: 10%;
 }
 a:focus { outline: 0 solid }
 img {

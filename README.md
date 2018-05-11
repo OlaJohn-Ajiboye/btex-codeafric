@@ -1,7 +1,9 @@
 # Btex-Codeafric
 
 To run use:
+
 ```git clone https://github.com/OlaJohn-Ajiboye/btex-codeafric.git``` 
+
 *It can then be served on a server of your choice*.
 
 

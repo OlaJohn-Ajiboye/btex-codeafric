@@ -55,7 +55,6 @@
               <tr ng-repeat="rate in rates">
                 <td>{{rate.description}} </td>
                 <td>{{rate.rate}}</td>
-                
               </tr>
             </tbody>
           </table>
@@ -79,7 +78,6 @@
               </tr>
             </tbody>
           </table>
-
           <table class="tab table table-bordered ">
               <h3 class="pay">Amount to pay:</h3>
               <div class="input-group pay">
@@ -104,17 +102,9 @@
                     </tr>
                   </tbody>
                 </table>
-
-
-
-
-
-
-      </div>
+           </div>
       <!--Second Column-->
       <div ng-init="getData()" class="col-md-5">
-        
-       
           <div>
              <a class="twitter-timeline twitter"  href="https://twitter.com/search?q=%23bitcoin%20" data-widget-id="959555305616171010"> #bitcoin Tweets </a>
               <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
@@ -141,11 +131,11 @@
                     <div layout="column" flex-gt-md="30" class="range">
                       <md-input-container>
 
-                        <input class="date " style="color:white;" mdc-datetime-picker date="true" time="false" type="text" placeholder="Start Date" max-date="dateTimeEnd"   ng-model="dateTimeStart"
+                        <input class="date " style="color:white;" mdc-datetime-picker date="true" time="false" type="text" placeholder="Start Date" max-date="dateTimeEnd"   ng-model="dateTimeStart" 
                         />
                       </md-input-container>
                       <md-input-container>
-                        <input class="date" style="color:white;" mdc-datetime-picker date="true" time="false" type="text" placeholder="End Date" min-date="dateTimeStart"  ng-model="dateTimeEnd"
+                        <input class="date" style="color:white;" mdc-datetime-picker date="true" time="false" type="text" placeholder="End Date" min-date="dateTimeStart"  ng-model="dateTimeEnd" 
                         />
                       </md-input-container>
                     </div>

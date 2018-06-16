@@ -74,8 +74,7 @@
     background-color: #d1c4e9;
     font-family: 'Rammetto One', cursive;
     font-weight: 500;
-    
- background-image: url("bg.jpg") ;
+    background-image: url("bg.jpg") ;
    
     
 }
@@ -169,51 +168,6 @@
     border-radius: 7.5px;
    
 }
-
-
-/**
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #263238;
-    border:solid 4px yellow;
-    font-size: 20px;
-    overflow: hidden;
-}
-
-li {
-    float: left;
-}
-
-ul li:last-child { float: right;
-    color: #ffd600;
-    font-weight: 800;
-    font-size: 20px;
-    font-family: 'Rammetto One', cursive;
- }
-
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-li a:hover:not(.active) {
-    background-color: #111;
-}
-
-.active {
-    background-color: #ffd600;
-}
-
-**/
-
-
-
 
 table.table-bordered{
     border:2px solid white;

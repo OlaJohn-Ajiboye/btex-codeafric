@@ -1,11 +1,12 @@
 var coinApp = angular.module('coinApp', ['tw-currency-select', 'ngMaterialDatePicker']);
 coinApp.controller('mainController', function ($scope, $http) {
-  $scope.dateTimeStart = "2018-01-10";
-  $scope.dateTimeEnd = "2018-01-18";
+  $scope.dateTimeStart = " ";
+  $scope.dateTimeEnd = " ";
 
-  var startDate = moment($scope.dateTimeStart).format('YYYY-MM-DD');
-  var endDate = moment($scope.dateTimeEnd).format('YYYY-MM-DD');
-  console.log(endDate);
+  // var startDate = moment($scope.dateTimeStart).format('YYYY-MM-DD');
+  // var endDate = moment($scope.dateTimeEnd).format('YYYY-MM-DD');
+  console.log($scope.dateTimeStart);
+  console.log($scope.dateTimeEnd);
 
   $scope.title = "Bitcoin Exchange";
   $scope.currencyChangeCount = 0;
@@ -69,7 +70,7 @@ $scope.logout = function () {
 
     $http({
       method: 'GET',
-      url: "https://api.coindesk.com/v1/bpi/historical/close.json?start=" + startDate + "&end=" + endDate
+      url: "https://api.coindesk.com/v1/bpi/historical/close.json?start=" + $scope.dateTimeStart + "&end=" +  $scope.dateTimeEnd
     }).then(function successCallback(response) {
 
       $scope.history = response.data.bpi;
@@ -83,8 +84,6 @@ $scope.logout = function () {
 
     angular.forEach($scope.rates, function (bt_rate) {
       var total = bt_rate.rate_float * $scope.units;
-      console.log(bt_rate)
-
       if (bt_rate.code == "USD") {
         $scope.total_currency_amount = 0.00;
         $scope.total_usd_amount = total;
